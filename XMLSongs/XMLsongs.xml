@@ -1,0 +1,66 @@
+<?xml-stylesheet type="text/css" href="XMLsongstyle.css"?>
+<SONGLIST>
+    <HEADER>
+        The Ye Train Wedding Band
+    </HEADER>
+    <SONG>
+        <TITLE>Off The Grid</TITLE>
+        <ARTIST>Kanye West</ARTIST>
+        <GENRE>Hip-Hop/Rap</GENRE>
+        <YEAR>2021</YEAR>
+    </SONG>
+    <SONG>
+        <TITLE>Closed on Sunday</TITLE>
+        <ARTIST>Kanye West</ARTIST>
+        <GENRE>Hip-Hop/Rap</GENRE>
+        <YEAR>2019</YEAR>
+    </SONG>
+    <SONG>
+        <TITLE>Power</TITLE>
+        <ARTIST>Kanye West</ARTIST>
+        <GENRE>Hip-Hop/Rap</GENRE>
+        <YEAR>2010</YEAR>
+    </SONG>
+    <SONG>
+        <TITLE>pushin P (feat. Young Thug)</TITLE>
+        <ARTIST>Gunna</ARTIST>
+        <GENRE>Hip-Hop/Rap</GENRE>
+        <YEAR>2022</YEAR>
+    </SONG>
+    <SONG>
+        <TITLE>Ego Death (feat. Kanye West, FKA twigs &amp; Skrillex)</TITLE>
+        <ARTIST>Ty Dolla $ign</ARTIST>
+        <GENRE>R&amp;B/Soul</GENRE>
+        <YEAR>2020</YEAR>
+    </SONG>
+    <SONG>
+        <TITLE>Gasoline</TITLE>
+        <ARTIST>The Weeknd</ARTIST>
+        <GENRE>R&amp;B/Soul</GENRE>
+        <YEAR>2022</YEAR>
+    </SONG>
+    <SONG>
+        <TITLE>Call the Coroner</TITLE>
+        <ARTIST>Future</ARTIST>
+        <GENRE>Hip-Hop/Rap</GENRE>
+        <YEAR>2019</YEAR>
+    </SONG>
+    <SONG>
+        <TITLE>The Rumbling</TITLE>
+        <ARTIST>SiM</ARTIST>
+        <GENRE>Rock</GENRE>
+        <YEAR>2022</YEAR>
+    </SONG>
+    <SONG>
+        <TITLE>Pretty Please</TITLE>
+        <ARTIST>Dua Lipa</ARTIST>
+        <GENRE>Pop</GENRE>
+        <YEAR>2020</YEAR>
+    </SONG>
+    <SONG>
+        <TITLE>Houses of the Holy</TITLE>
+        <ARTIST>Led Zeppelin</ARTIST>
+        <GENRE>Rock</GENRE>
+        <YEAR>1975</YEAR>
+    </SONG>
+</SONGLIST>

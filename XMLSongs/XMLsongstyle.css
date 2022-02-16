@@ -1,0 +1,36 @@
+SONGLIST {
+    background-color: #D2B48C;
+    width: 100%;
+    text-align: center;
+}
+HEADER {
+    display: block;
+    margin-top: 10pt;
+    margin-bottom: 20pt;
+    font-size: 40pt;
+    font-family: "Copperplate";
+}
+SONG {
+    display: block;
+    margin-bottom: 30pt;
+    margin-left: 0;
+    font-family: "Monaco";
+}
+TITLE {
+    display: block;
+    color: #000000;
+    font-size: 18pt;
+    font-weight: bold;
+}
+ARTIST {
+    display: block;
+    color: #8b0000;
+    margin-left: 10pt;
+    text-transform: uppercase;
+}
+GENRE, YEAR {
+    display: block;
+    color: #8b0000;
+    margin-left: 10pt;
+    font-style: italic;
+}
