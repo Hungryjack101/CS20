@@ -1,0 +1,25 @@
+body {
+    background-color: DarkGrey;
+    background-image: url("hotdog1.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+}
+h1 {
+    font-family: cursive;
+    text-align: center;
+    font-size: 40pt;
+    color: white;
+}
+.boxed {
+    text-align: center;
+    font-family: "Tahoma";
+    font-size: 17pt;
+    width: 100%;
+    color: white;
+    border: 1px solid white;
+    width: 500px;
+    background-color: DarkOrange;
+    margin: auto;
+    margin-top: 100px;
+    padding-top: 10px;
+}

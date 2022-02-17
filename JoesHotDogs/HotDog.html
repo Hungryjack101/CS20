@@ -1,0 +1,30 @@
+<html>
+<div class="row">
+  <div class="column"></div>
+  <div class="column"></div>
+</div>
+<head>
+    <link rel="stylesheet" href="HotDog.css">
+</head>
+<h1>Joe's Hotdog Stand</h1>
+<div class = "boxed">
+    <script language="javascript">
+        alert("Welcome to Joe's Hotdog Stand!");
+        var x = parseInt(prompt("How many hotdogs do you want?", "0"));
+        document.write("Hotdogs: " + x + "<br /><br />");
+        var y = parseInt(prompt("How many fries do you want?", "0"));
+        document.write("Fries: " + y + "<br /><br />");
+        var z = parseInt(prompt("How many sodas do you want?", "0"));
+        document.write("Sodas: " + z + "<br /><br />");
+        var subtotal = (((3.75 * x) + (2.00 * y) + (1.80 * z)).toFixed(2));
+        var discount = (subtotal>=20 ? (subtotal * .1) : 0);
+        document.write("Joe's special offer?: " + (subtotal>=20 ? "YES! $" + discount.toFixed(2) + " off!<br /><br />" : "No<br /><br />") );
+        subtotal = (subtotal - discount).toFixed(2);
+        document.write("Subtotal: $" + subtotal + "<br /><br />");
+        var tax = (subtotal * .0625).toFixed(2);
+        document.write("Tax: $" + tax + "<br /><br />");
+        var total = (parseFloat(subtotal) + parseFloat(tax)).toFixed(2);
+        document.write("Total: $" + total + "<br /><br />");
+    </script>
+</div>
+</html>
