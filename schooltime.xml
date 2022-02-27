@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UNIVERSITIES>
+    <SCHOOL>
+        <NAME>Tufts University</NAME>
+        <STATE>MA</STATE>
+        <STUDENTS>6000</STUDENTS>
+        <CS>1000</CS>
+    </SCHOOL>
+    <SCHOOL>
+        <NAME>Oregon University</NAME>
+        <STATE>Oregon</STATE>
+        <STUDENTS>10000</STUDENTS>
+        <CS>2000</CS>
+    </SCHOOL>
+    <SCHOOL>
+        <NAME>Kansas State University</NAME>
+        <STATE>Kansas</STATE>
+        <STUDENTS>49000</STUDENTS>
+        <CS>17</CS>
+    </SCHOOL>
+</UNIVERSITIES>

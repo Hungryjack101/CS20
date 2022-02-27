@@ -1,0 +1,86 @@
+<html>
+<div class="row">
+  <div class="column"></div>
+  <div class="column"></div>
+</div>
+<head>
+    <link rel="stylesheet" href="lottery.css">
+</head>
+<h1>Lucky For Life</h1>
+<div class = "boxed">
+    <script language="javascript">
+        min = Math.ceil(1);
+        max = Math.floor(49);
+        var nums = [Math.floor(Math.random() * (max - min) + min),
+                    Math.floor(Math.random() * (max - min) + min),
+                    Math.floor(Math.random() * (max - min) + min),
+                    Math.floor(Math.random() * (max - min) + min),
+                    Math.floor(Math.random() * (max - min) + min)];
+        document.write("Your Pick: ");
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < i; j++) {
+                if (nums[i] == nums[j]) {
+                    nums[i] = Math.floor(Math.random() * (max - min) + min);
+                    j = 0;
+                }
+            }
+            document.write(nums[i] + " ");
+        }
+        document.write("<br /><br />Sorted: ");
+        for (let i = 0; i < 49; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (nums[j] == i) {
+                    document.write(nums[j] + " ");
+                }
+            }
+        }
+        max = Math.floor(19);
+        var luckyball = Math.floor(Math.random() * (max - min) + min);
+        document.write("Lucky Ball: " + luckyball + "<br /><br />");
+        document.write("Winners: 12 15 24 35 48 Lucky Ball: 3<br /><br />");
+        document.write("Matching Numbers: ");
+        let match = 0;
+        for (let i = 0; i < 5; i++) {
+            if (nums[i] == 12 || nums[i] == 15 || nums[i] == 24 || nums[i] == 35 || nums[i] == 48) {
+                match++;
+            }
+        }
+        document.write(match + "<br /><br /> Lucky Ball Hit?: ");
+        if (luckyball == 3) {
+            document.write("YES!");
+        } else {
+            document.write("No");
+        }
+        document.write("<br /><br />Winnings: $")
+        if (luckyball == 3) {
+            if (match == 0) {
+                document.write("4");
+            } else if (match == 1) {
+                document.write("6");
+            } else if (match == 2) {
+                document.write("25");
+            } else if (match == 3) {
+                document.write("150");
+            } else if (match == 4) {
+                document.write("5,000");
+            } else if (match == 5) {
+                document.write("7,000 a WEEK for LIFE!");
+            }
+        } else {
+            if (match == 0) {
+                document.write("0");
+            } else if (match == 1) {
+                document.write("0");
+            } else if (match == 2) {
+                document.write("3");
+            } else if (match == 3) {
+                document.write("20");
+            } else if (match == 4) {
+                document.write("200");
+            } else if (match == 5) {
+                document.write("25,000 a YEAR for LIFE");
+            }
+        }
+    </script>
+</div>
+</html>
