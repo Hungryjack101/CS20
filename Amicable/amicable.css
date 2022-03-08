@@ -1,0 +1,50 @@
+body {
+    background-image: url("amicable.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+}
+h1 {
+    font-family: verdana;
+    text-align: center;
+    font-size: 40pt;
+    color: white;
+    margin-top: 50px;
+}
+.boxed {
+    text-align: center;
+    font-family: "Tahoma";
+    font-size: 20pt;
+    width: 100%;
+    color: white;
+    border: 1px solid white;
+    background-color: blue;
+    width: 550px;
+    margin: auto;
+    margin-top: 100px;
+    padding-top: 10px;
+}
+.submit {
+    background-color: black;
+    padding: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Tahoma';
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    margin-top: 35px;
+}
+.submit:hover {
+    border: none;
+    background: darkblue;
+    box-shadow: 0px 0px 1px #777;
+}
+.submit:active {
+    background: blue;
+}
+.input {
+    font-size: 20px;
+    font-family: "Tahoma";
+}
