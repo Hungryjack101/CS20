@@ -2,32 +2,55 @@
 <html>
 <head>
     <link rel="stylesheet" href="JSONsongs.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
 </head>
-    <body>
-        <h1>The Ye Train Wedding Band</h1>
+<body>
+    <h1>The Ye Train Wedding Band</h1>
+    <div class="full" id="fullstring"></div>
+    <div class="input">
         <form>
-            Genre: <input type= 'drop' id='genrechoice' value = 'Choose' class = "category"><br />
-            <input type = 'button' class = "submit" value = 'Go!' onclick = 'checker()'><br />
+            <label for="genre">Genre: </label>
+                <select name="genre" id="genre" class="submit">
+                    <option value="Hip-Hop/Rap">Hip-Hop/Rap</option>
+                    <option value="R&amp;B/Soul">R&amp;B/Soul</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                </select>
+                <br>
         </form>
-        <p id="s"></p>
-        <script language="javascript">
-            let text = '{"songlist": [{"name":"Off The Grid", "artist":"Kanye West", "genre":"Hip-Hop/Rap", "year":"2021"},' +
-            '{"name":"Closed on Sunday", "artist":"Kanye West", "genre":"Hip-Hop/Rap", "year":"2019"},' +
-            '{"name":"Power", "artist":"Kanye West", "genre":"Hip-Hop/Rap", "year":"2010"},' +
-            '{"name":"pushin P (feat. Young Thug)", "artist":"Gunna", "genre":"Hip-Hop/Rap", "year":"2022"},' +
-            '{"name":"Ego Death (feat. Kanye West, FKA twigs &amp; Skrillex)", "artist":"Ty Dolla $ign", "genre":"R&amp;B/Soul", "year":"2020"},' +
-            '{"name":"Gasoline", "artist":"The Weeknd", "genre":"R&amp;B/Soul", "year":"2022"},' +
-            '{"name":"Call the Coroner", "artist":"Future", "genre":"Hip-Hop/Rap", "year":"2019"},' +
-            '{"name":"The Rumbling", "artist":"SiM", "genre":"Rock", "year":"2022"},' +
-            '{"name":"Pretty Please", "artist":"Dua Lipa", "genre":"Pop", "year":"2020"},' +
-            '{"name":"Houses of the Holy", "artist":"Led Zeppelin", "genre":"Rock", "year":"1975"}]}'
-            const songs = JSON.parse(text);
+        <input type="submit" class="submit" value="Filter" onclick="serial()"><br />
+    </div>
+    <div class="filtered" id="filtered"></div>
+    <script language="javascript">
+        var nicer;
+        $.get("https://hungryjack101.github.io/CS20/JSONsongs/JSONsongs.json", function(nice) {
+            document.getElementById("fullstring").innerHTML = JSON.stringify(nice);
+            nicer = JSON.parse(JSON.stringify(nice));
+        })
+        function loopy(nicer, genre) {
+            var songs = "<br><br><strong>Filtered Songs:</strong><br>";
             for (let i = 0; i < 10; i++) {
-                document.getElementById("s").innerHTML = "<strong>" + songs.songlist[1].name
-                    + "</strong><br />" + songs.songlist[1].artist;
+                if (nicer[i].genre == genre) {
+                    songs += nicer[i].name + "<br>";
+                }
             }
-            
-            
-        </script>
-    </body>
+            return songs;
+        }
+        function serial() {
+            if (document.getElementById("genre").value == "Hip-Hop/Rap") {
+                document.getElementById("filtered").innerHTML = loopy(nicer, "Hip-Hop/Rap");
+            } else if (document.getElementById("genre").value == "R&B/Soul") {
+                document.getElementById("filtered").innerHTML = loopy(nicer, "R&amp;B/Soul");
+            } else if (document.getElementById("genre").value == "Rock") {
+                document.getElementById("filtered").innerHTML = loopy(nicer, "Rock");
+            } else if (document.getElementById("genre").value == "Pop") {
+                document.getElementById("filtered").innerHTML = loopy(nicer, "Pop");
+            }
+        }
+    </script>
+</body>
 </html>
