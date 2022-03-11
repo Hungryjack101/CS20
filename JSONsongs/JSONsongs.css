@@ -1,0 +1,12 @@
+body {
+    background-color: #D2B48C;
+    text-align: center;
+    font-family: "Monaco";
+}
+h1 {
+    display: block;
+    margin-top: 10pt;
+    margin-bottom: 20pt;
+    font-size: 40pt;
+    font-family: "Copperplate";
+}
