@@ -11,6 +11,19 @@
 <body>
     <h1>The Ye Train Wedding Band</h1>
     <div class="full" id="fullstring"></div>
+    <div class="list" id="lister"></div>
+    <script language="javascript">
+        var songslist;
+        $.get("https://hungryjack101.github.io/CS20/JSONsongs/JSONsongs.json", function(nice) {
+            document.getElementById("fullstring").innerHTML = JSON.stringify(nice);
+            songslist = JSON.parse(JSON.stringify(nice));
+            var result = "<strong>Songs:</strong><br><br>";
+            for (let i = 0; i < 10; i++) {
+                result += "<strong>" + songslist[i].name + "</strong><br>" + songslist[i].artist + "<br>" + songslist[i].genre + "<br>" + songslist[i].year + "<br><br>";
+            }
+            document.getElementById("lister").innerHTML = result;
+        })
+    </script>
     <div class="input">
         <form>
             <label for="genre">Genre: </label>
@@ -28,7 +41,6 @@
     <script language="javascript">
         var nicer;
         $.get("https://hungryjack101.github.io/CS20/JSONsongs/JSONsongs.json", function(nice) {
-            document.getElementById("fullstring").innerHTML = JSON.stringify(nice);
             nicer = JSON.parse(JSON.stringify(nice));
         })
         function loopy(nicer, genre) {
