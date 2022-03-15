@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body style="background: darkorange" onload="loadit()">
+    <script language="javascript">
+        function getlink() {
+            var x = prompt("What is your name?", "Your Name Here");
+            let stringy = "https://api.agify.io/?name=" + x;
+            return stringy;
+        }
+        function loadit() {
+            /* Step 1: Make instance of request object...
+            ...to make HTTP request after page is loaded*/
+            request = new XMLHttpRequest();
+            console.log("1 - request object created");
+            // Step 2: Set the URL for the AJAX request to be the JSON file
+            request.open("GET", getlink(), true);
+            console.log("2 - opened request file");
+            // Step 3: set up event handler/callback
+            request.onreadystatechange = function() {
+                console.log("3 - readystatechange event fired.");
+                if (request.readyState == 4 && request.status == 200) {
+                    // Step 5: wait for done + success
+                    result = request.responseText;
+                    data = JSON.parse(result);
+                    if (data.age == null) {
+                        document.getElementById("data").innerHTML = "<strong>Invalid name, refresh and try again!</strong>";
+                    } else {
+                        document.getElementById("data").innerHTML = "<strong>Name: </strong>" + data.name + "<br><strong>Predicted Age: </strong>" + data.age;
+                    }
+                }
+            }
+            // Step 4: fire off the HTTP request
+            request.send();
+            console.log("4 - Request sent");
+        }
+    </script>
+    
+    <h1 style="text-align: center; font-size: 72px">API Fun!</h1>
+    <div style="text-align: center; font-size: 30px" id="data"></div>
+    
+    <div style="font-size: 21px; margin-left: 100px; margin-right: 100px;">
+        <br> <br> <br>
+        &emsp;The API I chose is called Agify.io, an API that takes a name and gives
+        a predicted age for that name. It can be found at https://api.agify.io/?name=jack,
+        but of course you change the value for name at the end of the link to try
+        out different names. The option I used for the API request was the name
+        value. In this website, for instance, you can input a name and my website
+        alters the name option in the link to display the predicted age value
+        taken from the website/the JSON values returned.<br>
+        &emsp;This API would be useful for fun, having someone you know try it
+        and seeing how close it is to their age. It can be (and has been) useful for
+        important statistics. For example, it was used alongside other APIs for
+        a report on The Guardian, analyzing 70 million comments posted on their
+        website. It provided quantitative evidence for online abuse and trolling,
+        indicating that the targets of the most online abuse were females and minorities.
+    </div>
+</body>
+</html>
