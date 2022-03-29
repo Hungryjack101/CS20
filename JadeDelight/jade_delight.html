@@ -74,6 +74,7 @@ function td(content, className="")
 	return "<td class = '" + className + "'>" + content + "</td>";
 }
 
+/* Omits the street and city data when the page loads */
 $(document).ready(function()
 {
     var address = document.getElementsByClassName("userInfo address");
@@ -114,6 +115,7 @@ document.addEventListener("input", function (event)
     }
 }, false);
 
+/* Returns the time the order will be ready */
 function timeytime () {
     var prd = document.getElementsByName("p_or_d");
     if (prd[1].checked) {
